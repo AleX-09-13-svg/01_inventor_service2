@@ -1,0 +1,2 @@
+class DrawingMethods:
+    pass

@@ -1,0 +1,163 @@
+{
+  "linked_parameters": [
+    {
+      "name": "petlya_d_prisadki",
+      "source_name": "Петля_D_присадки"
+    },
+    {
+      "name": "styazhka_d",
+      "source_name": "Стяжка_D"
+    },
+    {
+      "name": "styazhka_d_rezbyshtoka",
+      "source_name": "Стяжка_D_резьбыШтока"
+    },
+    {
+      "name": "shkant_d",
+      "source_name": "Шкант_D"
+    },
+    {
+      "name": "konfirmat_d_vplast",
+      "source_name": "Конфирмат_D_вПласть"
+    },
+    {
+      "name": "styazhka_d_telashtoka",
+      "source_name": "Стяжка_D_телаШтока"
+    },
+    {
+      "name": "konfirmat_d_vtorets",
+      "source_name": "Конфирмат_D_вТорец"
+    },
+    {
+      "name": "polkoderzhatel_d",
+      "source_name": "Полкодержатель_D"
+    },
+    {
+      "name": "styazhkah_rezbashtoka_petlya",
+      "source_name": "Стяжкаh_резьбаШтока_Петля"
+    },
+    {
+      "name": "styazhka_otstup",
+      "source_name": "Стяжка_отступ"
+    },
+    {
+      "name": "konfirmat_glubina",
+      "source_name": "Конфирмат_глубина"
+    },
+    {
+      "name": "tolschina_karkasa_yaschika",
+      "source_name": "Толщина_каркаса_ящика"
+    },
+    {
+      "name": "tolschina_karkasa_mdf",
+      "source_name": "Толщина_каркаса_МДФ"
+    },
+    {
+      "name": "tolschina_karkasa_shpon",
+      "source_name": "Толщина_каркаса_ШПОН"
+    },
+    {
+      "name": "shkant_glubina_v_plast",
+      "source_name": "Шкант_глубина_в_пласть"
+    },
+    {
+      "name": "shkant_glubina_v_torets",
+      "source_name": "Шкант_глубина_в_торец"
+    },
+    {
+      "name": "polkoderzhatel_glubina_v_plast",
+      "source_name": "Полкодержатель_глубина_в_пласть"
+    },
+    {
+      "name": "polkoderzhatel_smeschenie_ot_niza_polki",
+      "source_name": "Полкодержатель_смещение_от_низа_полки"
+    },
+    {
+      "name": "m_konfirmat_d_vplast",
+      "source_name": "M_Конфирмат_D_вПласть"
+    },
+    {
+      "name": "otverstie_regulirovka_opory_d",
+      "source_name": "Отверстие_регулировка_опоры_D"
+    },
+    {
+      "name": "nakolka_d",
+      "source_name": "Наколка_D"
+    },
+    {
+      "name": "m_konfirmat_d_vtorets",
+      "source_name": "M_Конфирмат_D_вТорец"
+    },
+    {
+      "name": "m_konfirmat_glubina_rezby",
+      "source_name": "M_Конфирмат_глубина_резьбы"
+    },
+    {
+      "name": "m_konfirmat_glubina",
+      "source_name": "M_Конфирмат_глубина"
+    },
+    {
+      "name": "tolschina_zadn_st_volodya",
+      "source_name": "Толщина_задн_ст_Володя"
+    },
+    {
+      "name": "otstup_paza_zadn_stenki_volodya",
+      "source_name": "Отступ_паза_задн_стенки_Володя"
+    },
+    {
+      "name": "tolschina_dna_yaschika_volodya",
+      "source_name": "Толщина_дна_ящика_Володя"
+    },
+    {
+      "name": "shirina_dobora_volodya",
+      "source_name": "Ширина_добора_Володя"
+    },
+    {
+      "name": "glubina_dobora_volodya",
+      "source_name": "Глубина_добора_Володя"
+    },
+    {
+      "name": "tolschina_materiala_dobora_volodya",
+      "source_name": "Толщина_материала_добора_Володя"
+    },
+    {
+      "name": "smeschenie_fasada_pod_telo_petli",
+      "source_name": "Смещение_фасада_под_тело_петли"
+    },
+    {
+      "name": "minimalnoe_rasstoyaniya_ot_zadnst_yaschika_do_zadnst",
+      "source_name": "Минимальное_расстояния_от_заднСт_ящика_до_заднСт"
+    },
+    {
+      "name": "zapadanie_kromki_polki_za_karkas",
+      "source_name": "Западание_кромки_полки_за_каркас"
+    },
+    {
+      "name": "minimalnyy_otstup_prisadki_ot_kromki_karkas",
+      "source_name": "Минимальный_отступ_присадки_от_кромки_Каркас"
+    },
+    {
+      "name": "minimalnyy_otstup_prisadki_ot_kromki_yaschik",
+      "source_name": "Минимальный_отступ_присадки_от_кромки_Ящик"
+    }
+  ],
+  "operations": [
+    {
+      "type": "center_hole_on_selected_face",
+      "sketch_name": "Hole centers",
+      "feature_name": "Center hole",
+      "diameter_parameter": "HoleDiameter",
+      "depth_parameter": "HoleDepth",
+      "direction": "positive"
+    }
+  ],
+  "parameter_aliases": {
+    "Старое_имя": "Новое_имя",
+    "HoleDiameter": "styazhka_d",
+    "HoleDepth": "styazhka_d_rezbyshtoka"
+  },
+  "parameter_name_changes": {
+    "missing_names": [],
+    "new_names": []
+  }
+}
