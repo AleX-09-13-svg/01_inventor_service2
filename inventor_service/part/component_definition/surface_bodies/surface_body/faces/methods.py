@@ -1,5 +1,9 @@
 class PartFaceMethods:
     @staticmethod
+    def _collection_items(collection):
+        return [collection.Item(index) for index in range(1, collection.Count + 1)]
+
+    @staticmethod
     def unique_faces(faces):
         result = []
         seen = set()
@@ -92,11 +96,56 @@ class PartFaceMethods:
 
         return self.unique_faces(faces)
 
+    def require_selected_faces(self, min_count=1, debug=False):
+        """Вернуть выбранные грани или поднять понятную ошибку."""
+        faces = self.selected_faces(debug=debug)
+
+        if len(faces) < min_count:
+            raise RuntimeError(
+                f"Сначала выдели минимум {min_count} грань(и) детали в Inventor."
+            )
+
+        return faces
+
+    def selected_face(self, debug=False):
+        """Вернуть одну выбранную грань."""
+        return self.require_selected_faces(1, debug=debug)[0]
+
+    def selected_planar_face(self, debug=False):
+        """Вернуть одну выбранную плоскую грань."""
+        face = self.selected_face(debug=debug)
+
+        try:
+            geometry = self.plane_geometry(face)
+            geometry.Normal
+            geometry.RootPoint
+        except Exception as exc:
+            raise RuntimeError("Выбранная грань не является плоской.") from exc
+
+        return face
+
     def pick_face(self, prompt_text="Select face", planar=True):
         selection_filter = (
             self.PART_FACE_PLANAR_FILTER if planar else self.PART_FACE_FILTER
         )
         return self.face_from_selection_object(self.pick(selection_filter, prompt_text))
+
+    def face_vertices(self, face):
+        """Вернуть список вершин грани."""
+        return self._collection_items(face.Vertices)
+
+    def face_vertex_points(self, face):
+        """Вернуть 3D-точки вершин грани."""
+        return [vertex.Point for vertex in self.face_vertices(face)]
+
+    @staticmethod
+    def face_vertex_count(face):
+        """Вернуть количество вершин грани."""
+        return face.Vertices.Count
+
+    def face_edges(self, face):
+        """Вернуть список ребер грани."""
+        return self._collection_items(face.Edges)
 
     def reset_faces_to_feature_appearance(self, faces):
         reset_count = 0
