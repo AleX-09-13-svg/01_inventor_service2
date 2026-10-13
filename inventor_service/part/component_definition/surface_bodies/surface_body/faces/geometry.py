@@ -38,10 +38,51 @@ class PartGeometryMethods:
         return cls.same_plane_entity(face1, face2, [0], tol)
 
     @classmethod
+    def same_offset_plane_entity(cls, entity, face, offset_value, tol=0.001):
+        return cls.same_plane_entity(entity, face, [offset_value], tol)
+
+    @classmethod
+    def plane_key(cls, entity, tol=0.001):
+        geometry = cls.plane_geometry(entity)
+        normal = geometry.Normal
+        root = geometry.RootPoint
+        values = [normal.X, normal.Y, normal.Z]
+
+        for value in values:
+            if abs(value) > tol:
+                sign = -1 if value < 0 else 1
+                break
+        else:
+            sign = 1
+
+        nx, ny, nz = (value * sign for value in values)
+        distance = (nx * root.X + ny * root.Y + nz * root.Z)
+        precision = max(0, len(str(tol).split(".")[-1]))
+
+        return (
+            round(nx, precision),
+            round(ny, precision),
+            round(nz, precision),
+            round(distance, precision),
+        )
+
+    @classmethod
     def group_faces_by_plane(cls, faces):
-        groups = []
+        groups_by_key = {}
+        fallback_faces = []
 
         for face in faces:
+            try:
+                key = cls.plane_key(face)
+            except Exception:
+                fallback_faces.append(face)
+                continue
+
+            groups_by_key.setdefault(key, []).append(face)
+
+        groups = list(groups_by_key.values())
+
+        for face in fallback_faces:
             for group in groups:
                 if cls.same_plane(group[0], face):
                     group.append(face)
@@ -50,3 +91,15 @@ class PartGeometryMethods:
                 groups.append([face])
 
         return groups
+
+    @classmethod
+    def plane_normal(cls, entity):
+        return cls.plane_geometry(entity).Normal
+
+    @classmethod
+    def face_normal(cls, face):
+        return cls.plane_normal(face)
+
+    @classmethod
+    def plane_root_point(cls, entity):
+        return cls.plane_geometry(entity).RootPoint

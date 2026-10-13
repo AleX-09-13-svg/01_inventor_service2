@@ -1,7 +1,11 @@
 import json
 from pathlib import Path
 
-from ....config import resolve_parameter_name, update_missing_parameter_suggestions
+from ....config import (
+    resolve_parameter_name,
+    update_missing_parameter_suggestions,
+    validate_library_config,
+)
 
 
 class PartConfiguredMethods:
@@ -41,12 +45,7 @@ class PartConfiguredMethods:
         ]
         self.validate_linked_parameters(parameter_names)
         update_missing_parameter_suggestions(config)
-
-        if config.get("missing_parameter_suggestions"):
-            raise ValueError(
-                "Missing operation parameters. Check "
-                "missing_parameter_suggestions in the config."
-            )
+        validate_library_config(config)
 
         features = []
         for operation in config.get("operations", []):

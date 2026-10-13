@@ -1,7 +1,7 @@
 from .core import PartCoreMethods
 from .features import PartConfiguredMethods, PartHoleMethods
 from .properties import PartProperties
-from .sketches import PartSketchMethods
+from .sketches import PartDrillingSketchMethods, PartSketchMethods
 from .surface_bodies import (
     PartFaceMethods,
     PartGeometryMethods,
@@ -15,6 +15,7 @@ __all__ = [
     "PartGeometryMethods",
     "PartHoleMethods",
     "PartProperties",
+    "PartDrillingSketchMethods",
     "PartSketchMethods",
     "PartSurfaceBodiesMethods",
 ]

@@ -5,6 +5,8 @@ from pathlib import Path
 
 
 PARAMETER_REFERENCE_KEYS = (
+    "diameter",
+    "depth",
     "diameter_parameter",
     "depth_parameter",
     "hole_diameter_parameter",
@@ -12,6 +14,7 @@ PARAMETER_REFERENCE_KEYS = (
     "counterbore_diameter_parameter",
     "counterbore_depth_parameter",
 )
+TECHNOLOGY_BLOCKS = ("stiajka", "confirmat")
 
 CYRILLIC_TRANSLIT = {
     "а": "a",
@@ -130,12 +133,72 @@ def operation_parameter_references(config):
     return references
 
 
+def _parameter_references(value):
+    references = []
+
+    if isinstance(value, dict):
+        for key, child in value.items():
+            if key in PARAMETER_REFERENCE_KEYS and isinstance(child, str) and child:
+                references.append(child)
+            elif isinstance(child, (dict, list)):
+                references.extend(_parameter_references(child))
+    elif isinstance(value, list):
+        for child in value:
+            references.extend(_parameter_references(child))
+
+    return references
+
+
+def technology_parameter_references(config):
+    references = []
+
+    for block_name in TECHNOLOGY_BLOCKS:
+        references.extend(_parameter_references(config.get(block_name, {})))
+
+    return references
+
+
+def library_parameter_references(config):
+    return operation_parameter_references(config) + technology_parameter_references(config)
+
+
+def missing_library_parameter_references(config):
+    available = set(linked_parameter_names(config))
+    aliases = config.get("parameter_aliases", {})
+    missing = []
+    seen = set()
+
+    for name in library_parameter_references(config):
+        resolved = aliases.get(name, name)
+        if resolved in available:
+            continue
+        if name in seen:
+            continue
+        seen.add(name)
+        missing.append(name)
+
+    return missing
+
+
+def validate_library_config(config):
+    missing = missing_library_parameter_references(config)
+
+    if missing:
+        raise ValueError(
+            "В библиотеке не найдены параметры:\n"
+            + "\n".join(missing)
+            + "\n\nПроверьте Excel-библиотеку или обновите part_config.json."
+        )
+
+    return True
+
+
 def build_missing_parameter_suggestions(config, limit=5):
     available = linked_parameter_names(config)
     aliases = config.get("parameter_aliases", {})
     missing = {}
 
-    for name in operation_parameter_references(config):
+    for name in library_parameter_references(config):
         resolved = aliases.get(name, name)
         if resolved in available:
             continue

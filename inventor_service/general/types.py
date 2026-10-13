@@ -14,6 +14,7 @@ class Point3d(Protocol):
 
 class TransientGeometry(Protocol):
     def CreatePoint2d(self, x: float, y: float) -> Point2d: ...
+    def CreatePoint(self, x: float, y: float, z: float) -> Point3d: ...
 
 
 class ObjectCollection(Protocol):
@@ -83,22 +84,98 @@ class SelectSet(Protocol):
 
 class SketchPoint(Protocol):
     HoleCenter: bool
+    Geometry: Point2d
 
 
 class SketchPoints(Protocol):
+    Count: int
+
     def Add(self, point: Point2d, hole_center: bool) -> SketchPoint: ...
+    def Item(self, index: int) -> SketchPoint: ...
+
+
+class SketchLine(Protocol):
+    Construction: bool
+    StartSketchPoint: SketchPoint
+    EndSketchPoint: SketchPoint
+
+
+class SketchLines(Protocol):
+    Count: int
+
+    def AddByTwoPoints(self, start_point: object, end_point: object) -> SketchLine: ...
+    def Item(self, index: int) -> SketchLine: ...
+
+
+class DimensionConstraint(Protocol):
+    Parameter: object
+
+
+class DimensionConstraints(Protocol):
+    Count: int
+
+    def AddTwoPointDistance(
+        self,
+        point1: object,
+        point2: object,
+        orientation: int,
+        text_point: Point2d,
+        driven: bool = False,
+    ) -> DimensionConstraint: ...
+
+    def Item(self, index: int) -> DimensionConstraint: ...
+
+
+class GeometricConstraints(Protocol):
+    def AddGround(self, entity: object) -> object: ...
+    def AddMidpoint(self, point_or_line_point: object, line: object) -> object: ...
+    def AddCoincident(self, entity1: object, entity2: object) -> object: ...
+    def AddPerpendicular(self, line1: object, line2: object) -> object: ...
+    def AddParallel(self, line1: object, line2: object) -> object: ...
+    def AddSymmetry(
+        self,
+        entity1: object,
+        entity2: object,
+        symmetry_line: object,
+    ) -> object: ...
 
 
 class Sketch(Protocol):
     Name: str
+    DeferUpdates: bool
+    DimensionsVisible: bool
     SketchPoints: SketchPoints
+    SketchLines: SketchLines
+    DimensionConstraints: DimensionConstraints
+    GeometricConstraints: GeometricConstraints
 
     def ModelToSketchSpace(self, point: Point3d) -> Point2d: ...
+    def SketchToModelSpace(self, point: Point2d) -> Point3d: ...
+    def AddByProjectingEntity(self, entity: object) -> object: ...
     def Solve(self) -> None: ...
 
 
 class Sketches(Protocol):
+    Count: int
+
     def Add(self, face: Face) -> Sketch: ...
+    def Item(self, index: int) -> Sketch: ...
+
+
+class WorkPlanes(Protocol):
+    def AddByLinePlaneAndAngle(
+        self,
+        line: object,
+        plane: object,
+        angle: object,
+        construction: bool = True,
+    ) -> object: ...
+
+    def AddByPlaneAndOffset(
+        self,
+        plane: object,
+        offset: object,
+    ) -> object: ...
 
 
 class HolePlacementDefinition(Protocol):
@@ -132,6 +209,7 @@ class Features(Protocol):
 class ComponentDefinition(Protocol):
     Sketches: Sketches
     Features: Features
+    WorkPlanes: WorkPlanes
 
 
 class PartDocument(Protocol):

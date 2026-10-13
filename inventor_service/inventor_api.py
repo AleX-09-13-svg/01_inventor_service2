@@ -41,3 +41,7 @@ class Inventor(
     ASSEMBLY_LEAF_OCCURRENCE_FILTER = kAssemblyLeafOccurrenceFilter
 
     FEATURE_APPEARANCE = kFeatureAppearance
+
+
+def get_inventor_service(app=None, visible=True):
+    return Inventor(app=app, visible=visible)

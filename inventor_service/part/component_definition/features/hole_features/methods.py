@@ -2,19 +2,6 @@ from .....general import kPositiveExtentDirection
 
 
 class PartHoleMethods:
-    @staticmethod
-    def unique_feature_name(features, base):
-        name = base
-        index = 1
-
-        while True:
-            try:
-                features.Item(name)
-                index += 1
-                name = f"{base} {index}"
-            except Exception:
-                return name
-
     def set_all_bodies_affected(self, feature, component_definition=None):
         component_definition = component_definition or self.comp
 
@@ -121,3 +108,111 @@ class PartHoleMethods:
             self.set_all_bodies_affected(feature, component_definition)
 
         return feature
+
+    def add_hole_batch(
+        self,
+        points,
+        diameter,
+        depth,
+        direction=kPositiveExtentDirection,
+        name=None,
+        **kwargs,
+    ):
+        return self.add_holes(
+            points,
+            diameter,
+            depth,
+            direction=direction,
+            name=name,
+            **kwargs,
+        )
+
+    def add_counterbore_batch(
+        self,
+        points,
+        hole_diameter,
+        hole_depth,
+        direction,
+        counterbore_diameter,
+        counterbore_depth,
+        name=None,
+        **kwargs,
+    ):
+        return self.add_counterbore_holes(
+            points,
+            hole_diameter,
+            hole_depth,
+            direction,
+            counterbore_diameter,
+            counterbore_depth,
+            name=name,
+            **kwargs,
+        )
+
+    def create_hole_batch_with_fallback(
+        self,
+        jobs,
+        points_key,
+        settings,
+        defaults=None,
+        label="Hole",
+    ):
+        defaults = defaults or {}
+        created = []
+
+        all_points = []
+        for job in jobs:
+            all_points.extend(job.get(points_key, []))
+
+        if all_points:
+            try:
+                created.append(self.add_hole_batch(all_points, **defaults, **settings))
+                return created
+            except Exception:
+                pass
+
+        for index, job in enumerate(jobs, start=1):
+            points = job.get(points_key, [])
+            if not points:
+                continue
+
+            job_settings = {**defaults, **settings}
+            job_settings.update(job.get("settings", {}))
+            job_settings.setdefault("name", f"{label}_{index}")
+            created.append(self.add_hole_batch(points, **job_settings))
+
+        return created
+
+    def create_confirmat_features(
+        self,
+        sketches=None,
+        faces=None,
+        face_label="red",
+        direction=None,
+    ):
+        from .....confirmat import create_confirmat_features
+
+        return create_confirmat_features(
+            self,
+            sketches=sketches,
+            faces=faces,
+            face_label=face_label,
+            direction=direction,
+        )
+
+    def create_confirmat_2_features(
+        self,
+        sketches=None,
+        faces=None,
+        face_label="yellow",
+        direction=None,
+    ):
+        from .....confirmat import create_confirmat_2_features
+
+        return create_confirmat_2_features(
+            self,
+            sketches=sketches,
+            faces=faces,
+            face_label=face_label,
+            direction=direction,
+        )

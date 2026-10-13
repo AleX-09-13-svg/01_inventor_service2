@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 from .excel import read_xlsx_column, read_xlsx_table, write_json
 from .parameters import build_linked_parameters, update_missing_parameter_suggestions
 
@@ -10,6 +13,13 @@ def build_part_config_from_excel(
     parameter_names_path=None,
     parameter_names_sheet=None,
 ):
+    config = {}
+    if json_path:
+        try:
+            config = json.loads(Path(json_path).read_text(encoding="utf-8"))
+        except FileNotFoundError:
+            config = {}
+
     if parameter_names_path:
         parameters = build_linked_parameters(
             read_xlsx_column(
@@ -24,29 +34,27 @@ def build_part_config_from_excel(
 
     operations = read_xlsx_table(excel_path, operation_sheet)
 
-    config = {
-        "linked_parameters": [
-            {
-                "name": row["name"],
-                **{
-                    key: value
-                    for key, value in row.items()
-                    if key != "name" and value not in (None, "")
-                },
-            }
-            for row in parameters
-            if row.get("name")
-        ],
-        "operations": [
-            {
+    config["linked_parameters"] = [
+        {
+            "name": row["name"],
+            **{
                 key: value
                 for key, value in row.items()
-                if value not in (None, "")
-            }
-            for row in operations
-        ],
-    }
-    config["parameter_aliases"] = {}
+                if key != "name" and value not in (None, "")
+            },
+        }
+        for row in parameters
+        if row.get("name")
+    ]
+    config["operations"] = [
+        {
+            key: value
+            for key, value in row.items()
+            if value not in (None, "")
+        }
+        for row in operations
+    ]
+    config.setdefault("parameter_aliases", {})
     update_missing_parameter_suggestions(config)
 
     if json_path:

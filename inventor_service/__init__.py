@@ -1,10 +1,23 @@
-from .inventor_api import Inventor
+from .inventor_api import Inventor, get_inventor_service
+from .confirmat import create_confirmat_2_features, create_confirmat_features
+from .modeling_constants import (
+    DRAWER_SKETCH_PREFIX,
+    DRILLING_SKETCH_PREFIX,
+    EDGE_OFFSET_DRAWER_PARAM,
+    EDGE_OFFSET_FRAME_PARAM,
+    EDGE_OFFSET_PARAM,
+    FRAME_THICKNESS_PARAM,
+    GRID_STEP_CM,
+    POINT_DISTANCE_PARAM,
+)
+from .settings import configure_settings
 from .config import (
     DEFAULT_PARAMETER_NAMES_PATH,
     build_linked_parameters,
     build_missing_parameter_suggestions,
     build_part_config_from_excel,
     linked_parameter_source_names,
+    missing_library_parameter_references,
     read_xlsx_table,
     refresh_linked_parameters_from_excel,
     resolve_parameter_name,
@@ -12,6 +25,7 @@ from .config import (
     schedule_linked_parameters_refresh,
     set_parameter_alias,
     update_missing_parameter_suggestions,
+    validate_library_config,
     write_json,
 )
 from .general import (
@@ -30,7 +44,12 @@ from .general import (
     Point3d,
     SelectSet,
     Sketch,
+    SketchLine,
+    SketchLines,
     Sketches,
+    DimensionConstraint,
+    DimensionConstraints,
+    GeometricConstraints,
     SketchPoint,
     SketchPoints,
     Transaction,
@@ -39,15 +58,29 @@ from .general import (
     TransientObjects,
     Vertex,
     Vertices,
+    WorkPlanes,
 )
 
 __all__ = [
     "Inventor",
+    "get_inventor_service",
+    "configure_settings",
+    "create_confirmat_2_features",
+    "create_confirmat_features",
+    "DRAWER_SKETCH_PREFIX",
+    "DRILLING_SKETCH_PREFIX",
+    "EDGE_OFFSET_DRAWER_PARAM",
+    "EDGE_OFFSET_FRAME_PARAM",
+    "EDGE_OFFSET_PARAM",
+    "FRAME_THICKNESS_PARAM",
+    "GRID_STEP_CM",
+    "POINT_DISTANCE_PARAM",
     "DEFAULT_PARAMETER_NAMES_PATH",
     "build_linked_parameters",
     "build_missing_parameter_suggestions",
     "build_part_config_from_excel",
     "linked_parameter_source_names",
+    "missing_library_parameter_references",
     "refresh_linked_parameters_from_excel",
     "read_xlsx_table",
     "resolve_parameter_name",
@@ -55,6 +88,7 @@ __all__ = [
     "schedule_linked_parameters_refresh",
     "set_parameter_alias",
     "update_missing_parameter_suggestions",
+    "validate_library_config",
     "write_json",
     "CommandManager",
     "ComponentDefinition",
@@ -71,7 +105,12 @@ __all__ = [
     "Point3d",
     "SelectSet",
     "Sketch",
+    "SketchLine",
+    "SketchLines",
     "Sketches",
+    "DimensionConstraint",
+    "DimensionConstraints",
+    "GeometricConstraints",
     "SketchPoint",
     "SketchPoints",
     "Transaction",
@@ -80,5 +119,6 @@ __all__ = [
     "TransientObjects",
     "Vertex",
     "Vertices",
+    "WorkPlanes",
 ]
 # from inventor_service import Inventor

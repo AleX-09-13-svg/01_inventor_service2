@@ -28,7 +28,12 @@ from .types import (
     Point3d,
     SelectSet,
     Sketch,
+    SketchLine,
+    SketchLines,
     Sketches,
+    DimensionConstraint,
+    DimensionConstraints,
+    GeometricConstraints,
     SketchPoint,
     SketchPoints,
     Transaction,
@@ -37,6 +42,7 @@ from .types import (
     TransientObjects,
     Vertex,
     Vertices,
+    WorkPlanes,
 )
 
 __all__ = [
@@ -67,7 +73,12 @@ __all__ = [
     "Point3d",
     "SelectSet",
     "Sketch",
+    "SketchLine",
+    "SketchLines",
     "Sketches",
+    "DimensionConstraint",
+    "DimensionConstraints",
+    "GeometricConstraints",
     "SketchPoint",
     "SketchPoints",
     "Transaction",
@@ -76,4 +87,5 @@ __all__ = [
     "TransientObjects",
     "Vertex",
     "Vertices",
+    "WorkPlanes",
 ]

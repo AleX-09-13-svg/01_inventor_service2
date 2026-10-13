@@ -13,12 +13,12 @@
       "source_name": "Стяжка_D_резьбыШтока"
     },
     {
-      "name": "shkant_d",
-      "source_name": "Шкант_D"
+      "name": "styazhkah_rezbashtoka_petlya",
+      "source_name": "Стяжкаh_резьбаШтока_Петля"
     },
     {
-      "name": "konfirmat_d_vplast",
-      "source_name": "Конфирмат_D_вПласть"
+      "name": "shkant_d",
+      "source_name": "Шкант_D"
     },
     {
       "name": "styazhka_d_telashtoka",
@@ -33,8 +33,8 @@
       "source_name": "Полкодержатель_D"
     },
     {
-      "name": "styazhkah_rezbashtoka_petlya",
-      "source_name": "Стяжкаh_резьбаШтока_Петля"
+      "name": "konfirmat_d_vplast",
+      "source_name": "Конфирмат_D_вПласть"
     },
     {
       "name": "styazhka_otstup",
@@ -43,18 +43,6 @@
     {
       "name": "konfirmat_glubina",
       "source_name": "Конфирмат_глубина"
-    },
-    {
-      "name": "tolschina_karkasa_yaschika",
-      "source_name": "Толщина_каркаса_ящика"
-    },
-    {
-      "name": "tolschina_karkasa_mdf",
-      "source_name": "Толщина_каркаса_МДФ"
-    },
-    {
-      "name": "tolschina_karkasa_shpon",
-      "source_name": "Толщина_каркаса_ШПОН"
     },
     {
       "name": "shkant_glubina_v_plast",
@@ -131,16 +119,88 @@
     {
       "name": "zapadanie_kromki_polki_za_karkas",
       "source_name": "Западание_кромки_полки_за_каркас"
-    },
-    {
-      "name": "minimalnyy_otstup_prisadki_ot_kromki_karkas",
-      "source_name": "Минимальный_отступ_присадки_от_кромки_Каркас"
-    },
-    {
-      "name": "minimalnyy_otstup_prisadki_ot_kromki_yaschik",
-      "source_name": "Минимальный_отступ_присадки_от_кромки_Ящик"
     }
   ],
+  "drilling": {
+    "drawer_edge_max_cm": 30.0
+  },
+  "confirmat": {
+    "outer": {
+      "diameter": "m_konfirmat_d_vplast",
+      "depth": "m_konfirmat_glubina_rezby",
+      "direction": "positive",
+      "feature_name": "Confirmat counterbore"
+    },
+    "inner": {
+      "diameter": "m_konfirmat_d_vtorets",
+      "depth": "m_konfirmat_glubina",
+      "direction": "positive",
+      "feature_name": "Confirmat inner"
+    },
+    "outer_2pcs": {
+      "diameter": "m_konfirmat_d_vplast",
+      "depth": "m_konfirmat_glubina_rezby",
+      "direction": "positive",
+      "feature_name": "Confirmat 2pcs counterbore"
+    },
+    "inner_2pcs": {
+      "diameter": "m_konfirmat_d_vtorets",
+      "depth": "m_konfirmat_glubina",
+      "direction": "positive",
+      "feature_name": "Confirmat 2pcs inner"
+    },
+    "outer_3pcs": {
+      "diameter": "m_konfirmat_d_vplast",
+      "depth": "m_konfirmat_glubina_rezby",
+      "direction": "positive",
+      "feature_name": "Confirmat counterbore"
+    },
+    "inner_3pcs": {
+      "diameter": "m_konfirmat_d_vtorets",
+      "depth": "m_konfirmat_glubina",
+      "direction": "positive",
+      "feature_name": "Confirmat inner"
+    },
+    "debug": false
+  },
+  "stiajka": {
+    "side_offset": 3.4,
+    "outer_main": {
+      "diameter": "styazhka_d_telashtoka",
+      "depth": "styazhka_otstup",
+      "direction": "positive",
+      "feature_name": "Stiajka outer 8x34"
+    },
+    "outer_secondary": {
+      "diameter": "styazhka_d_rezbyshtoka",
+      "depth": "styazhkah_rezbashtoka_petlya",
+      "direction": "negative",
+      "feature_name": "Stiajka outer 5x13"
+    },
+    "cup": {
+      "diameter_parameter": "styazhka_d",
+      "depth_parameter": "styazhka_otstup",
+      "direction": "positive",
+      "feature_name": "Stiajka cup"
+    },
+    "parameters": {
+      "diameter": "styazhka_d",
+      "depth": "styazhkah_rezbashtoka_petlya",
+      "offset": "styazhka_otstup"
+    },
+    "inner_short": {
+      "diameter": "shkant_d",
+      "depth": "shkant_glubina_v_plast",
+      "direction": "negative",
+      "feature_name": "Shkant 8x10"
+    },
+    "inner_long": {
+      "diameter": "shkant_d",
+      "depth": "shkant_glubina_v_torets",
+      "direction": "positive",
+      "feature_name": "Shkant 8x20"
+    }
+  },
   "operations": [
     {
       "type": "center_hole_on_selected_face",
@@ -157,7 +217,13 @@
     "HoleDepth": "styazhka_d_rezbyshtoka"
   },
   "parameter_name_changes": {
-    "missing_names": [],
+    "missing_names": [
+      "Толщина_каркаса_ящика",
+      "Толщина_каркаса_МДФ",
+      "Толщина_каркаса_ШПОН",
+      "Минимальный_отступ_присадки_от_кромки_Каркас",
+      "Минимальный_отступ_присадки_от_кромки_Ящик"
+    ],
     "new_names": []
   }
 }
