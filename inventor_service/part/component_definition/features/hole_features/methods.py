@@ -183,36 +183,3 @@ class PartHoleMethods:
 
         return created
 
-    def create_confirmat_features(
-        self,
-        sketches=None,
-        faces=None,
-        face_label="red",
-        direction=None,
-    ):
-        from .....confirmat import create_confirmat_features
-
-        return create_confirmat_features(
-            self,
-            sketches=sketches,
-            faces=faces,
-            face_label=face_label,
-            direction=direction,
-        )
-
-    def create_confirmat_2_features(
-        self,
-        sketches=None,
-        faces=None,
-        face_label="yellow",
-        direction=None,
-    ):
-        from .....confirmat import create_confirmat_2_features
-
-        return create_confirmat_2_features(
-            self,
-            sketches=sketches,
-            faces=faces,
-            face_label=face_label,
-            direction=direction,
-        )

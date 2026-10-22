@@ -1,6 +1,5 @@
 from .inventor_api import Inventor, get_inventor_service
-from .confirmat import create_confirmat_2_features, create_confirmat_features
-from .modeling_constants import (
+from .part.component_definition.sketches.drilling_constants import (
     DRAWER_SKETCH_PREFIX,
     DRILLING_SKETCH_PREFIX,
     EDGE_OFFSET_DRAWER_PARAM,
@@ -65,8 +64,6 @@ __all__ = [
     "Inventor",
     "get_inventor_service",
     "configure_settings",
-    "create_confirmat_2_features",
-    "create_confirmat_features",
     "DRAWER_SKETCH_PREFIX",
     "DRILLING_SKETCH_PREFIX",
     "EDGE_OFFSET_DRAWER_PARAM",

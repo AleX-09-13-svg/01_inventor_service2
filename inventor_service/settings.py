@@ -3,13 +3,6 @@ import os
 from pathlib import Path
 
 from .config import validate_library_config
-from .general import (
-    kAlignedDim,
-    kHorizontalDim,
-    kNegativeExtentDirection,
-    kPositiveExtentDirection,
-    kVerticalDim,
-)
 
 DEFAULT_LIBRARY_CONFIG_PATH = (
     Path(__file__).resolve().parent.parent
@@ -21,11 +14,6 @@ DEFAULT_LIBRARY_CONFIG_PATH = (
 DEFAULT_SETTINGS = {
     "drilling": {
         "drawer_edge_max_cm": 30.0,
-    },
-    "confirmat": {},
-    "stiajka": {
-        "side_offset": 3.4,
-        "parameters": {},
     },
 }
 
@@ -142,36 +130,3 @@ def drawer_edge_max_cm():
         return value
 
     return setting("drawer_edge_max_cm", default=30.0)
-
-
-def hole_direction(name):
-    directions = {
-        "positive": kPositiveExtentDirection,
-        "+": kPositiveExtentDirection,
-        "negative": kNegativeExtentDirection,
-        "-": kNegativeExtentDirection,
-    }
-
-    if isinstance(name, str):
-        key = name.strip().lower()
-        if key not in directions:
-            raise ValueError(f"Unknown hole direction: {name}")
-        return directions[key]
-
-    return name
-
-
-def dimension_orientation(name):
-    orientations = {
-        "horizontal": kHorizontalDim,
-        "vertical": kVerticalDim,
-        "aligned": kAlignedDim,
-    }
-
-    if isinstance(name, str):
-        key = name.strip().lower()
-        if key not in orientations:
-            raise ValueError(f"Unknown dimension orientation: {name}")
-        return orientations[key]
-
-    return name

@@ -1,36 +1,11 @@
 from inventor_service import Inventor
 
+if __name__ == "__main__":
+    # Шаг 1. Подключаемся к уже запущенному Inventor.
+    # Шаг 1. Подключаемся к уже запущенному Inventor.
+    inventor = Inventor()
+    print("Активный документ:", inventor.active_document_name())
 
-HOLE_DIAMETER = "5 mm"
-HOLE_DEPTH = "10 mm"
-HOLE_DIRECTION = "positive"
-SKETCH_NAME = "Hole center"
-FEATURE_NAME = "Center hole"
-
-
-inventor = Inventor()
-
-selected_faces = inventor.selected_faces()
-if selected_faces:
-    face = selected_faces[0]
-else:
-    face = inventor.pick_face("Select planar face for hole", planar=True)
-
-sketch = inventor.get_or_create_sketch_on_face(
-    face,
-    name=SKETCH_NAME,
-    prefix=SKETCH_NAME,
-)
-hole_center = inventor.add_face_center_point(face, sketch=sketch)
-
-hole = inventor.add_holes(
-    [hole_center],
-    diameter=HOLE_DIAMETER,
-    depth=HOLE_DEPTH,
-    direction=HOLE_DIRECTION,
-    name=FEATURE_NAME,
-)
-
-inventor.update_part()
-
-print("Created hole:", hole.Name)
+    # Шаг 2. Получаем заранее выделенную плоскую грань детали.
+    face = inventor.selected_face()
+    print("Плоская грань получена.")

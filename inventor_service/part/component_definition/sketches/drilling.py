@@ -1,4 +1,4 @@
-from ....modeling_constants import (
+from .drilling_constants import (
     DRAWER_SKETCH_PREFIX,
     DRILLING_SKETCH_PREFIX,
     EDGE_OFFSET_DRAWER_PARAM,

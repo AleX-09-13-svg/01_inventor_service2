@@ -10,7 +10,7 @@ from .constants import (
     kPositiveExtentDirection,
     kVerticalDim,
 )
-from .methods import InventorMethods
+from .methods import InventorBaseMethods, InventorMethods
 from .properties import InventorProperties
 from .types import (
     CommandManager,
@@ -47,6 +47,7 @@ from .types import (
 
 __all__ = [
     "InventorProperties",
+    "InventorBaseMethods",
     "InventorMethods",
     "kAlignedDim",
     "kAssemblyLeafOccurrenceFilter",

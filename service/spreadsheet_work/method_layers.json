@@ -1,0 +1,1421 @@
+{
+  "colors": {
+    "api": "#D9EAF7",
+    "helper": "#FFF2CC",
+    "app": "#E2F0D9"
+  },
+  "fonts": {
+    "api": "#156082",
+    "helper": "#9C6500",
+    "app": "#237A3B"
+  },
+  "cells": [
+    {
+      "sheet": "Структура папок",
+      "cell": "B22",
+      "text": "│  │     │     ├─ def hole_direction(name)",
+      "methods": [
+        {
+          "start": 22,
+          "end": 42,
+          "name": "hole_direction",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B23",
+      "text": "│  │     │     ├─ def opposite_hole_direction(direction)",
+      "methods": [
+        {
+          "start": 22,
+          "end": 56,
+          "name": "opposite_hole_direction",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B24",
+      "text": "│  │     │     └─ def dimension_orientation(name)",
+      "methods": [
+        {
+          "start": 22,
+          "end": 49,
+          "name": "dimension_orientation",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B27",
+      "text": "│  │     │     ├─ def update()",
+      "methods": [
+        {
+          "start": 22,
+          "end": 30,
+          "name": "update",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B28",
+      "text": "│  │     │     └─ def active_document_name()",
+      "methods": [
+        {
+          "start": 22,
+          "end": 44,
+          "name": "active_document_name",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B30",
+      "text": "│  │     │  └─ def screen_updates_suspended()",
+      "methods": [
+        {
+          "start": 19,
+          "end": 45,
+          "name": "screen_updates_suspended",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B32",
+      "text": "│  │     │  ├─ def pick(selection_filter, prompt_text)",
+      "methods": [
+        {
+          "start": 19,
+          "end": 54,
+          "name": "pick",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B33",
+      "text": "│  │     │  ├─ def show_message(title, text, icon)",
+      "methods": [
+        {
+          "start": 19,
+          "end": 50,
+          "name": "show_message",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B34",
+      "text": "│  │     │  └─ def show_missing_parameters_message(names)",
+      "methods": [
+        {
+          "start": 19,
+          "end": 57,
+          "name": "show_missing_parameters_message",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B36",
+      "text": "│  │     │  ├─ def mm(value)",
+      "methods": [
+        {
+          "start": 19,
+          "end": 28,
+          "name": "mm",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B37",
+      "text": "│  │     │  └─ def mm_text(value)",
+      "methods": [
+        {
+          "start": 19,
+          "end": 33,
+          "name": "mm_text",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B39",
+      "text": "│  │           ├─ def safe_getattr(obj, attr, default)",
+      "methods": [
+        {
+          "start": 22,
+          "end": 54,
+          "name": "safe_getattr",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B40",
+      "text": "│  │           └─ def object_collection(objects)",
+      "methods": [
+        {
+          "start": 22,
+          "end": 48,
+          "name": "object_collection",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B44",
+      "text": "│  │  │     └─ build_part_config_from_excel()",
+      "methods": [
+        {
+          "start": 15,
+          "end": 45,
+          "name": "build_part_config_from_excel",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B47",
+      "text": "│  │  │     ├─ build_linked_parameters()",
+      "methods": [
+        {
+          "start": 15,
+          "end": 40,
+          "name": "build_linked_parameters",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B48",
+      "text": "│  │  │     ├─ resolve_parameter_name()",
+      "methods": [
+        {
+          "start": 15,
+          "end": 39,
+          "name": "resolve_parameter_name",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B49",
+      "text": "│  │  │     └─ validate_library_config()",
+      "methods": [
+        {
+          "start": 15,
+          "end": 40,
+          "name": "validate_library_config",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B51",
+      "text": "│  │        ├─ refresh_linked_parameters_from_excel()",
+      "methods": [
+        {
+          "start": 15,
+          "end": 53,
+          "name": "refresh_linked_parameters_from_excel",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B52",
+      "text": "│  │        └─ schedule_linked_parameters_refresh()",
+      "methods": [
+        {
+          "start": 15,
+          "end": 51,
+          "name": "schedule_linked_parameters_refresh",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B57",
+      "text": "│  │        └─ def pick_part(prompt_text)",
+      "methods": [
+        {
+          "start": 19,
+          "end": 41,
+          "name": "pick_part",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B71",
+      "text": "│        │     ├─ update_part(), save_part(), save_part_as()",
+      "methods": [
+        {
+          "start": 18,
+          "end": 31,
+          "name": "update_part",
+          "category": "api"
+        },
+        {
+          "start": 33,
+          "end": 44,
+          "name": "save_part",
+          "category": "api"
+        },
+        {
+          "start": 46,
+          "end": 60,
+          "name": "save_part_as",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B72",
+      "text": "│        │     ├─ parameter(), parameter_value()",
+      "methods": [
+        {
+          "start": 18,
+          "end": 29,
+          "name": "parameter",
+          "category": "api"
+        },
+        {
+          "start": 31,
+          "end": 48,
+          "name": "parameter_value",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B74",
+      "text": "│        │     └─ unique_feature_name(), unique_work_plane_name()",
+      "methods": [
+        {
+          "start": 18,
+          "end": 39,
+          "name": "unique_feature_name",
+          "category": "helper"
+        },
+        {
+          "start": 41,
+          "end": 65,
+          "name": "unique_work_plane_name",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B80",
+      "text": "│        │  │  ├─ load_part_config(), apply_part_config()",
+      "methods": [
+        {
+          "start": 18,
+          "end": 36,
+          "name": "load_part_config",
+          "category": "app"
+        },
+        {
+          "start": 38,
+          "end": 57,
+          "name": "apply_part_config",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B81",
+      "text": "│        │  │  ├─ apply_part_operation()",
+      "methods": [
+        {
+          "start": 18,
+          "end": 40,
+          "name": "apply_part_operation",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B82",
+      "text": "│        │  │  └─ _apply_center_hole_on_selected_face()",
+      "methods": [
+        {
+          "start": 18,
+          "end": 55,
+          "name": "_apply_center_hole_on_selected_face",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B87",
+      "text": "│        │           ├─ add_holes()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 35,
+          "name": "add_holes",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B88",
+      "text": "│        │           ├─ add_counterbore_holes()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "add_counterbore_holes",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B89",
+      "text": "│        │           ├─ add_hole_batch(), add_counterbore_batch()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 40,
+          "name": "add_hole_batch",
+          "category": "app"
+        },
+        {
+          "start": 42,
+          "end": 65,
+          "name": "add_counterbore_batch",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B90",
+      "text": "│        │           ├─ create_hole_batch_with_fallback()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 57,
+          "name": "create_hole_batch_with_fallback",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B91",
+      "text": "│        │           └─ set_all_bodies_affected()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 49,
+          "name": "set_all_bodies_affected",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B98",
+      "text": "│        │  │     ├─ surface_body()",
+      "methods": [
+        {
+          "start": 21,
+          "end": 35,
+          "name": "surface_body",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B99",
+      "text": "│        │  │     └─ all_surface_bodies()",
+      "methods": [
+        {
+          "start": 21,
+          "end": 41,
+          "name": "all_surface_bodies",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B106",
+      "text": "│        │     │  │     ├─ plane_geometry()",
+      "methods": [
+        {
+          "start": 27,
+          "end": 43,
+          "name": "plane_geometry",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B107",
+      "text": "│        │     │  │     ├─ same_plane_entity()",
+      "methods": [
+        {
+          "start": 27,
+          "end": 46,
+          "name": "same_plane_entity",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B108",
+      "text": "│        │     │  │     └─ group_faces_by_plane()",
+      "methods": [
+        {
+          "start": 27,
+          "end": 49,
+          "name": "group_faces_by_plane",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B111",
+      "text": "│        │     │        ├─ selected_faces(), selected_face()",
+      "methods": [
+        {
+          "start": 27,
+          "end": 43,
+          "name": "selected_faces",
+          "category": "helper"
+        },
+        {
+          "start": 45,
+          "end": 60,
+          "name": "selected_face",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B114",
+      "text": "│        │     │        ├─ face_vertices(), face_edges()",
+      "methods": [
+        {
+          "start": 27,
+          "end": 42,
+          "name": "face_vertices",
+          "category": "helper"
+        },
+        {
+          "start": 44,
+          "end": 56,
+          "name": "face_edges",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B115",
+      "text": "│        │     │        └─ reset_faces_to_feature_appearance()",
+      "methods": [
+        {
+          "start": 27,
+          "end": 62,
+          "name": "reset_faces_to_feature_appearance",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B123",
+      "text": "│           │     ├─ ensure_drilling_sketch_parameters()",
+      "methods": [
+        {
+          "start": 21,
+          "end": 56,
+          "name": "ensure_drilling_sketch_parameters",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B124",
+      "text": "│           │     ├─ create_drilling_sketch()",
+      "methods": [
+        {
+          "start": 21,
+          "end": 45,
+          "name": "create_drilling_sketch",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B125",
+      "text": "│           │     └─ create_drilling_sketches_for_faces()",
+      "methods": [
+        {
+          "start": 21,
+          "end": 57,
+          "name": "create_drilling_sketches_for_faces",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B132",
+      "text": "│              │     ├─ all_sketches(), sketches_by_prefix()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 38,
+          "name": "all_sketches",
+          "category": "helper"
+        },
+        {
+          "start": 40,
+          "end": 60,
+          "name": "sketches_by_prefix",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B133",
+      "text": "│              │     └─ sketch_on_face_plane()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 46,
+          "name": "sketch_on_face_plane",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B135",
+      "text": "│              │     ├─ model_to_sketch_point(), sketch_to_model_points()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "model_to_sketch_point",
+          "category": "api"
+        },
+        {
+          "start": 49,
+          "end": 73,
+          "name": "sketch_to_model_points",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B136",
+      "text": "│              │     ├─ face_bounds_in_sketch(), face_center_in_sketch()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "face_bounds_in_sketch",
+          "category": "helper"
+        },
+        {
+          "start": 49,
+          "end": 72,
+          "name": "face_center_in_sketch",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B137",
+      "text": "│              │     └─ create_point2d(), create_point3d()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 40,
+          "name": "create_point2d",
+          "category": "api"
+        },
+        {
+          "start": 42,
+          "end": 58,
+          "name": "create_point3d",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B139",
+      "text": "│              │     ├─ add_sketch_point()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 42,
+          "name": "add_sketch_point",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B140",
+      "text": "│              │     ├─ sketch_points(), sketch_hole_center_points()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 39,
+          "name": "sketch_points",
+          "category": "helper"
+        },
+        {
+          "start": 41,
+          "end": 68,
+          "name": "sketch_hole_center_points",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B141",
+      "text": "│              │     ├─ add_face_center_point()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "add_face_center_point",
+          "category": "app"
+        }
+      ],
+      "category": "app"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B142",
+      "text": "│              │     └─ unique_points(), mark_as_hole_centers()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 39,
+          "name": "unique_points",
+          "category": "helper"
+        },
+        {
+          "start": 41,
+          "end": 63,
+          "name": "mark_as_hole_centers",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B144",
+      "text": "│              │     ├─ project_point_to_plane()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 48,
+          "name": "project_point_to_plane",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B145",
+      "text": "│              │     ├─ project_face_edges()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 44,
+          "name": "project_face_edges",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B146",
+      "text": "│              │     └─ project_entity_to_sketch()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 50,
+          "name": "project_entity_to_sketch",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B149",
+      "text": "│              │     ├─ sketch_lines_for_face()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "sketch_lines_for_face",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B150",
+      "text": "│              │     ├─ line_length(), line_midpoint()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 37,
+          "name": "line_length",
+          "category": "helper"
+        },
+        {
+          "start": 39,
+          "end": 54,
+          "name": "line_midpoint",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B151",
+      "text": "│              │     └─ closest_point_on_line()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "closest_point_on_line",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B153",
+      "text": "│              │     ├─ add_two_point_dimension()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 49,
+          "name": "add_two_point_dimension",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B154",
+      "text": "│              │     ├─ add_aligned_dimension()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "add_aligned_dimension",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B155",
+      "text": "│              │     └─ sketch_dimension_constraints()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 54,
+          "name": "sketch_dimension_constraints",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B158",
+      "text": "│              │     ├─ deferred_sketch_updates()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 49,
+          "name": "deferred_sketch_updates",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B161",
+      "text": "│              │     ├─ _add_geometric_constraint()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 51,
+          "name": "_add_geometric_constraint",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B162",
+      "text": "│              │     ├─ add_ground_constraint()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "add_ground_constraint",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B163",
+      "text": "│              │     └─ add_coincident_constraint(), add_symmetry_constraint()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 51,
+          "name": "add_coincident_constraint",
+          "category": "api"
+        },
+        {
+          "start": 53,
+          "end": 78,
+          "name": "add_symmetry_constraint",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B165",
+      "text": "│                    ├─ create_work_plane_by_line_plane_angle()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 63,
+          "name": "create_work_plane_by_line_plane_angle",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B166",
+      "text": "│                    └─ add_offset_work_plane()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 47,
+          "name": "add_offset_work_plane",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C8",
+      "text": "add_sketch()",
+      "methods": [
+        {
+          "start": 0,
+          "end": 12,
+          "name": "add_sketch",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C9",
+      "text": "all_sketches(), sketches_by_prefix()",
+      "methods": [
+        {
+          "start": 0,
+          "end": 14,
+          "name": "all_sketches",
+          "category": "helper"
+        },
+        {
+          "start": 16,
+          "end": 36,
+          "name": "sketches_by_prefix",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C10",
+      "text": "model_to_sketch_point(sketch, point_3d)",
+      "methods": [
+        {
+          "start": 0,
+          "end": 39,
+          "name": "model_to_sketch_point",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C11",
+      "text": "point_2d = self.create_point2d(10, 20)",
+      "methods": [
+        {
+          "start": 16,
+          "end": 38,
+          "name": "create_point2d",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C13",
+      "text": "add_sketch_point(), add_sketch_line()",
+      "methods": [
+        {
+          "start": 0,
+          "end": 18,
+          "name": "add_sketch_point",
+          "category": "api"
+        },
+        {
+          "start": 20,
+          "end": 37,
+          "name": "add_sketch_line",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C14",
+      "text": "project_entity_to_sketch()",
+      "methods": [
+        {
+          "start": 0,
+          "end": 26,
+          "name": "project_entity_to_sketch",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C15",
+      "text": "add_coincident_constraint(), add_parallel_constraint(), add_perpendicular_constraint() и другие",
+      "methods": [
+        {
+          "start": 0,
+          "end": 27,
+          "name": "add_coincident_constraint",
+          "category": "api"
+        },
+        {
+          "start": 29,
+          "end": 54,
+          "name": "add_parallel_constraint",
+          "category": "api"
+        },
+        {
+          "start": 56,
+          "end": 86,
+          "name": "add_perpendicular_constraint",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C16",
+      "text": "add_two_point_dimension(), add_aligned_dimension()",
+      "methods": [
+        {
+          "start": 0,
+          "end": 25,
+          "name": "add_two_point_dimension",
+          "category": "api"
+        },
+        {
+          "start": 27,
+          "end": 50,
+          "name": "add_aligned_dimension",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "C17",
+      "text": "set_sketch_visible(), solve_sketch(), set_sketch_defer_updates()",
+      "methods": [
+        {
+          "start": 0,
+          "end": 20,
+          "name": "set_sketch_visible",
+          "category": "api"
+        },
+        {
+          "start": 22,
+          "end": 36,
+          "name": "solve_sketch",
+          "category": "api"
+        },
+        {
+          "start": 38,
+          "end": 64,
+          "name": "set_sketch_defer_updates",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "B19",
+      "text": "get_sketch_by_name(name)                              # найти эскиз по точному имени",
+      "methods": [
+        {
+          "start": 0,
+          "end": 24,
+          "name": "get_sketch_by_name",
+          "category": "helper"
+        }
+      ],
+      "category": "helper"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "B20",
+      "text": "rename_sketch(sketch, name)                          # переименовать",
+      "methods": [
+        {
+          "start": 0,
+          "end": 27,
+          "name": "rename_sketch",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "B21",
+      "text": "delete_sketch(sketch)                                          # удалить",
+      "methods": [
+        {
+          "start": 0,
+          "end": 21,
+          "name": "delete_sketch",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "B22",
+      "text": "sketch_to_model_point(sketch, point_2d)    # преобразовать одну 2D-точку в 3D",
+      "methods": [
+        {
+          "start": 0,
+          "end": 39,
+          "name": "sketch_to_model_point",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "B23",
+      "text": "add_sketch_circle(sketch, center, radius)      # добавить окружность",
+      "methods": [
+        {
+          "start": 0,
+          "end": 41,
+          "name": "add_sketch_circle",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    },
+    {
+      "sheet": "Лист1",
+      "cell": "B24",
+      "text": "add_sketch_arc(...)                                             # добавить дугу",
+      "methods": [
+        {
+          "start": 0,
+          "end": 19,
+          "name": "add_sketch_arc",
+          "category": "api"
+        }
+      ],
+      "category": "api"
+    }
+  ],
+  "mixed": [
+    {
+      "sheet": "Структура папок",
+      "cell": "B73",
+      "text": "│        │     ├─ add_user_parameter(), ensure_user_parameter()",
+      "methods": [
+        {
+          "start": 18,
+          "end": 38,
+          "name": "add_user_parameter",
+          "category": "api"
+        },
+        {
+          "start": 40,
+          "end": 63,
+          "name": "ensure_user_parameter",
+          "category": "helper"
+        }
+      ]
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B112",
+      "text": "│        │     │        ├─ pick_face(), pick_faces_until_cancel()",
+      "methods": [
+        {
+          "start": 27,
+          "end": 38,
+          "name": "pick_face",
+          "category": "api"
+        },
+        {
+          "start": 40,
+          "end": 65,
+          "name": "pick_faces_until_cancel",
+          "category": "helper"
+        }
+      ]
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B113",
+      "text": "│        │     │        ├─ faces_by_color(), set_sketch_color_rgb()",
+      "methods": [
+        {
+          "start": 27,
+          "end": 43,
+          "name": "faces_by_color",
+          "category": "helper"
+        },
+        {
+          "start": 45,
+          "end": 67,
+          "name": "set_sketch_color_rgb",
+          "category": "api"
+        }
+      ]
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B131",
+      "text": "│              │     ├─ add_sketch(), get_or_create_sketch_on_face()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 36,
+          "name": "add_sketch",
+          "category": "api"
+        },
+        {
+          "start": 38,
+          "end": 68,
+          "name": "get_or_create_sketch_on_face",
+          "category": "helper"
+        }
+      ]
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B148",
+      "text": "│              │     ├─ sketch_lines(), add_sketch_line()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 38,
+          "name": "sketch_lines",
+          "category": "helper"
+        },
+        {
+          "start": 40,
+          "end": 57,
+          "name": "add_sketch_line",
+          "category": "api"
+        }
+      ]
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B157",
+      "text": "│              │     ├─ solve_sketch(), solve_or_update_sketch()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 38,
+          "name": "solve_sketch",
+          "category": "api"
+        },
+        {
+          "start": 40,
+          "end": 64,
+          "name": "solve_or_update_sketch",
+          "category": "helper"
+        }
+      ]
+    },
+    {
+      "sheet": "Структура папок",
+      "cell": "B159",
+      "text": "│              │     └─ hide_sketch_dimensions(), set_sketch_visible()",
+      "methods": [
+        {
+          "start": 24,
+          "end": 48,
+          "name": "hide_sketch_dimensions",
+          "category": "helper"
+        },
+        {
+          "start": 50,
+          "end": 70,
+          "name": "set_sketch_visible",
+          "category": "api"
+        }
+      ]
+    }
+  ]
+}
